@@ -18,10 +18,8 @@ package com.yahoo.labs.samoa.instances;
 import java.io.Reader;
 import java.io.Serializable;
 import java.io.StringReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
+
 import moa.core.Utils;
 
 /**
@@ -647,6 +645,11 @@ public class Instances implements Serializable {
      */
     public int[] getIndicesIrrelevants() {
         return indicesIrrelevants;
+    }
+
+
+    public Enumeration<Instance> getEnumeration(){
+        return Collections.enumeration(instances);
     }
 
     /**
